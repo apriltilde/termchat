@@ -13,8 +13,7 @@ function getmsg(chatid) {
             if (xhr.status === 404) {
                 window.location.href = "../";
             }
-            if (xhr.status === 200) {
-                
+            if (xhr.status === 200) { 
                 var response = JSON.parse(xhr.responseText);
                 var messages = response.messages;
                 var terminalOutput = document.querySelector('#b .terminal-output');
@@ -231,6 +230,7 @@ createdm: function(dm) {
 },
 
 help: function() {
+	term.echo('Created by [[!;;;;https://april.lexiqqq.com/]april]');
     term.echo("Available Commands:");
     term.echo("  namecolour [colour]: Change username colour");
     term.echo("  bgcolour [colour]: Change background colour");
@@ -243,7 +243,7 @@ help: function() {
     
 }
 }, {
-    greetings: 'cmd\n\nAvailable Commands:\n  namecolour [colour]: Change username colour\n  bgcolour [colour]: Change background colour\n  createdm [username]: Create a dm with user\n  goto [chat]: Switch to the specified chat\n  info [username]: Get user information\n  clear: Clear the terminal output\n  quit: Disconnects the user from the server\n  help: Display this help message',
+    greetings: 'cmd\nCreated by [[!;;;;https://april.lexiqqq.com/]april]\nAvailable Commands:\n  namecolour [colour]: Change username colour\n  bgcolour [colour]: Change background colour\n  createdm [username]: Create a dm with user\n  goto [chat]: Switch to the specified chat\n  info [username]: Get user information\n  clear: Clear the terminal output\n  quit: Disconnects the user from the server\n  help: Display this help message',
     prompt: '>',
     autocompleteMenu: true,
     completion: autocomp
