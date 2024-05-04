@@ -1,0 +1,16 @@
+{
+  "name": "node-php-sqlite-project",
+  "version": "1.0.0",
+  "description": "Node.js project with PHP 7.4 and SQLite3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.2" // SQLite3 package for Node.js
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0" // Minimum Node.js version required
+  }
+}
