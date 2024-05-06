@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "a.php", true);
+  xhr.open("GET", "autologin.php", true);
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
