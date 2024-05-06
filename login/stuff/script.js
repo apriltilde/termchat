@@ -118,7 +118,7 @@ function send(...msgs) {
 $(document).ready(function () {
 getmsg(chatid);
     setInterval(function() {
-        getmsg(chatid)();
+        getmsg(chatid);
     }, 4000);
 
 
