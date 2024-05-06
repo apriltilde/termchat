@@ -4,7 +4,19 @@ $(document).ready(function () {
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
-              window.location.href = "https://april.lexiqqq.com/login/stuff";
+              var currentPath = window.location.pathname;
+              
+              // Split the pathname into segments
+              var pathSegments = currentPath.split("/");
+              
+              // Replace the last segment with "stuff"
+              pathSegments[pathSegments.length - 1] = "stuff";
+              
+              // Join the segments back into a new pathname
+              var newPath = pathSegments.join("/");
+              
+              // Navigate to the new URL
+              window.location.pathname = newPath;
           }
       }
   };
@@ -86,7 +98,19 @@ $(document).ready(function () {
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.onreadystatechange = function () {
               if (xhr.readyState == 4 && xhr.status == 200) {
-                window.location.href = '/login/stuff';
+              var currentPath = window.location.pathname;
+              
+              // Split the pathname into segments
+              var pathSegments = currentPath.split("/");
+              
+              // Replace the last segment with "stuff"
+              pathSegments[pathSegments.length - 1] = "stuff";
+              
+              // Join the segments back into a new pathname
+              var newPath = pathSegments.join("/");
+              
+              // Navigate to the new URL
+              window.location.pathname = newPath;
               }
             };
             xhr.send("username=" + encodeURIComponent(form.name) + "&password=" + encodeURIComponent(hashedPassword));
